@@ -9,11 +9,18 @@
 </head>
 <body>
 <div class="container" style="padding-top:50px">
-<h2>Generate PDF file from MySQL Using PHP</h2>
 <form class="form-inline" method="post" action="convert.php">
-<button type="submit" id="pdf" name="convert" class="btn btn-primary"><i class="fa fa-pdf"" aria-hidden="true"></i>
-Generate PDF</button>
+<div>
+    <center>
+    <h2>Generate PDF file from MySQL Using PHP</h2>
+    <input type="number" id="num" name="num" placeholder="Enter ID" required/>
+    <input type="submit" id="retreive" name="retreive" value="Get PDF" class="btn btn-success">
+    </center>
+</div>
 </form>
+<form class="form-inline" method="post" action="convertall.php">
+    <center><input type="submit" id="retreive" name="retreive" value="Get All Records" class="btn btn-info"></center>
+    </form>
 </fieldset>
 </div>
 </body>

@@ -1,22 +1,27 @@
 <?php
-Class dbObj{
+Class dbObj
+{
 /* Database connection start */
 var $dbhost = "localhost";
 var $username = "root";
 var $password = "";
 var $dbname = "fileconvert";
 var $conn;
-function getConnstring() {
+function getConnstring() 
+{
 $con = mysqli_connect($this->dbhost, $this->username, $this->password, $this->dbname) or die("Connection failed: " . mysqli_connect_error());
 
 /* check connection */
-if (mysqli_connect_errno()) {
+if (mysqli_connect_errno()) 
+{
 printf("Connect failed: %s\n", mysqli_connect_error());
 exit();
-} else {
+} 
+else 
+{
 $this->conn = $con;
 }
 return $this->conn;
 }
-}
+} //class closing
 ?>

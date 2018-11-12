@@ -36,10 +36,8 @@ $db = new dbObj();  //creating an object called $db//dbobj is a class name in th
 $connString =  $db->getConnstring(); //getconnstring is a function in connection.php 
 
 $display_heading = array('id'=>'ID', 'employee_name'=> 'Name', 'employee_age'=> 'Age','employee_salary'=> 'Salary',);
-$val=$_POST['num'];
-$quer = "SELECT id, employee_name, employee_age, employee_salary FROM employee WHERE id='$val'";
 
-$result = mysqli_query($connString, $quer) or die("database error:". mysqli_error($connString));
+$result = mysqli_query($connString, "SELECT id, employee_name, employee_age, employee_salary FROM employee") or die("database error:". mysqli_error($connString));
 $header = mysqli_query($connString, "SHOW columns FROM employee");
 
 $pdf = new PDF();
@@ -48,7 +46,7 @@ $pdf->AddPage();
 //foter page
 $pdf->AliasNbPages();
 $pdf->SetFont('Arial','B',12);
-foreach($header as $heading)   //to display heading at the top
+foreach($header as $heading) 
 {
 $pdf->Cell(40,12,$display_heading[$heading['Field']],1);
 }
