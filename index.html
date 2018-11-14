@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <meta charset="UTF-8">
 <title>Simple Example of PDF file using PHP and MySQL</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<script src="./js/data.js"></script> 
 </head>
 <body>
 <div class="container" style="padding-top:50px">
@@ -18,10 +20,17 @@
     </center>
 </div>
 </form>
+<form class="form-inline" method="post" action="exportexcel.php">
+        <center> <input type="number" id="num2" name="num2" placeholder="Enter ID" required/>
+        <input type="submit" id="ee" name="ee" value="EXCEL" class="btn btn-success"></center>
+</form>
 <form class="form-inline" method="post" action="convertall.php">
-    <center><input type="submit" id="retreive" name="retreive" value="Get All Records" class="btn btn-info"></center>
+    <center><input type="submit" id="ca" name="ca" value="Get All Records PDF" class="btn btn-info"></center>
     </form>
-</fieldset>
+<form class="form-inline" method="post" action="toexcel.php">
+        <center><input type="submit" id="te" name="te" value="Get All Records EXCEL" class="btn btn-info"></center>
+</form>
+
 </div>
 </body>
 </html>
