@@ -1,4 +1,4 @@
-# database-to-pdf-excel
+# database-to-pdf-excel in php
 Code to convert database data to a pdf file using third party FPDF library 
 Unzip the FPDF .
 ----------------------//////INSTALLATION//////---------------------
